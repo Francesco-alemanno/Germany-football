@@ -48,7 +48,10 @@ function HomePage() {
         </div>
       </Link>
 
-      <Link to="/championsLeague" style={{ textDecoration: "none", color: "black" }}>
+      <Link
+        to="/championsLeague"
+        style={{ textDecoration: "none", color: "black" }}
+      >
         <div className="results-home">
           <img src={championsLogo} alt="Champions League logo" />
           <h6>Scopri i risultati della Champions League!</h6>
@@ -62,7 +65,10 @@ function HomePage() {
         </div>
       </Link>
 
-      <Link to="/bundesliga2" style={{ textDecoration: "none", color: "black" }}>
+      <Link
+        to="/bundesliga2"
+        style={{ textDecoration: "none", color: "black" }}
+      >
         <div className="results-home">
           <img src={bundesligaLogo} alt="Bundesliga 2 logo" />
           <h6>Scopri i risultati della Bundesliga 2!</h6>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "/src/css/Results.css";
+import ".../css/Results.css";
 import { Link } from "react-router-dom";
 
 function Bundesliga() {
