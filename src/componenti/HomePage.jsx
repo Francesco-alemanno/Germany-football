@@ -2,6 +2,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../css/Homepage.css";
 
+// import immagini (CORRETTO per Vite)
+import bundesligaLogo from "../assets/germany_bundesliga.svg";
+import championsLogo from "../assets/championsLeague.svg";
+import dfbLogo from "../assets/dfbpokal.svg";
+
 function HomePage() {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
@@ -27,7 +32,7 @@ function HomePage() {
 
     fetchData();
   }, []);
- 
+
   if (error) return <p className="error">ERRORE NEL FETCH DEI DATI</p>;
   if (!data.length) return <p className="loading">Caricamento in corso...</p>;
 
@@ -36,39 +41,30 @@ function HomePage() {
       <h1>Football zone</h1>
       <h6>Scopri i risultati di questa settimana!</h6>
 
-      <Link style={{textDecoration:'none', color:'black'}} to={"/bundesliga"}>
+      <Link to="/bundesliga" style={{ textDecoration: "none", color: "black" }}>
         <div className="results-home">
-          <img
-            src=".\src\assets\germany_bundesliga.svg"
-            alt="logo-bundesliga"
-          />
-          <h6>Scopri i risultati della bundesliga!</h6>
+          <img src={bundesligaLogo} alt="Bundesliga logo" />
+          <h6>Scopri i risultati della Bundesliga!</h6>
         </div>
       </Link>
-      <Link style={{textDecoration:'none', color:'black'}} to={"/championsLeague"}>
+
+      <Link to="/championsLeague" style={{ textDecoration: "none", color: "black" }}>
         <div className="results-home">
-          <img
-            src=".\src\assets\championsLeague.svg"
-            alt="logo-bundesliga"
-          />
+          <img src={championsLogo} alt="Champions League logo" />
           <h6>Scopri i risultati della Champions League!</h6>
         </div>
       </Link>
-      <Link style={{textDecoration:'none', color:'black'}} to={"/dfbpokal"}>
+
+      <Link to="/dfbpokal" style={{ textDecoration: "none", color: "black" }}>
         <div className="results-home">
-          <img
-            src=".\src\assets\dfbpokal.svg"
-            alt="logo-dfbPokal"
-          />
-          <h6>Scopri i risultati della DFB POKAL!</h6>
+          <img src={dfbLogo} alt="DFB Pokal logo" />
+          <h6>Scopri i risultati della DFB Pokal!</h6>
         </div>
       </Link>
-      <Link style={{textDecoration:'none', color:'black'}} to={"/bundesliga2"}>
+
+      <Link to="/bundesliga2" style={{ textDecoration: "none", color: "black" }}>
         <div className="results-home">
-          <img
-            src=".\src\assets\germany_bundesliga.svg"
-            alt="logo-dfbPokal"
-          />
+          <img src={bundesligaLogo} alt="Bundesliga 2 logo" />
           <h6>Scopri i risultati della Bundesliga 2!</h6>
         </div>
       </Link>
