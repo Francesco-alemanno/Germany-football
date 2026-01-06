@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import ".../css/Results.css";
+import "../css/Results.css";
 
 function Bundesliga2() {
   const [data, setData] = useState([]);
