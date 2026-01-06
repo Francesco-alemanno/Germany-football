@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "/src/css/Homepage.css";
+import "../css/Homepage.css";
+
 function HomePage() {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
