@@ -1,0 +1,149 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CONTAINER */
+.homepage {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* TITOLO */
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* BACK HOME */
+.homeBack {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.bt-home {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bt-home:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* LISTA MATCH */
+.matches {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* CARD MATCH */
+.match-card {
+  background-color: white;
+  border-radius: 14px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.match-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* TEAM */
+.team {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 40%;
+}
+
+.team img {
+  width: 36px;
+  height: auto;
+}
+
+.team p {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* VS */
+.vs {
+  width: 20%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.vs p {
+  margin-top: 0.3rem;
+  font-size: 1rem;
+}
+
+/* STATO */
+.loading,
+.error {
+  font-size: 1.1rem;
+  margin-top: 3rem;
+}
+
+.error {
+  color: red;
+}
+
+/* ---------- TABLET ---------- */
+@media (min-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .matches {
+    max-width: 800px;
+  }
+
+  .team img {
+    width: 42px;
+  }
+
+  .team p {
+    font-size: 1rem;
+  }
+
+  .vs {
+    font-size: 1rem;
+  }
+}
+
+/* ---------- DESKTOP ---------- */
+@media (min-width: 1024px) {
+  .matches {
+    max-width: 900px;
+  }
+
+  .match-card {
+    padding: 1.2rem 1.5rem;
+  }
+}
